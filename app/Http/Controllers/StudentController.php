@@ -14,4 +14,9 @@ class StudentController extends Controller
 
         return view('students.index')->with('students' , $students['data']);
     }
+
+    public function create()
+    {
+        return view('students.create');
+    }
 }

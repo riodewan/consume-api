@@ -24,9 +24,9 @@ class BaseApi
         return $this->client()->get($endpoint, $data);
     }
 
-    public static function create(String $endpoint, Array $data)
+    public function create(String $endpoint, Array $data)
     {
-
+        return $this->client()->post($endpoint, $data);
     }
 
     public static function detail(String $endpoint, String $id, Array $data)
