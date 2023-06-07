@@ -24,23 +24,23 @@ class BaseApi
         return $this->client()->get($endpoint, $data);
     }
 
-    public function create(String $endpoint, Array $data)
+    public function create(String $endpoint, Array $data = [])
     {
         return $this->client()->post($endpoint, $data);
     }
 
-    public static function detail(String $endpoint, String $id, Array $data)
+    public function detail(String $endpoint, String $id, Array $data = [])
     {
-
+        return $this->client()->get("$endpoint/$id", $data);
     }
 
-    public static function update(String $endpoint, String $id, Array $data)
+    public function update(String $endpoint, String $id, Array $data = [])
     {
-
+        return $this->client()->patch("$endpoint/$id", $data);
     }
 
-    public static function delete(String $endpoint, String $id, Array $data)
+    public function delete(String $endpoint, String $id)
     {
-
+        return $this->client()->delete("$endpoint/$id");
     }
 }

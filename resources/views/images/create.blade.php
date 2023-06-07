@@ -18,30 +18,15 @@
             </ul>
         </div>
         @endif
-            <form action="/siswa/store" method="post">
+            <form action="/images/store" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">nis</label>
-                    <input type="text" name="nis" class="form-control" id="exampleInputPassword1">
+                    <label for="exampleInputPassword1" class="form-label">title</label>
+                    <input type="text" name="title" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">nama</label>
-                    <input type="text" name="nama" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">rombel</label>
-                    <input type="text" name="rombel" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">rayon</label>
-                    <input type="text" name="rayon" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
-                    <input type="date" name="tgl_lahir" class="form-control" id="exampleInputEmail1"
+                    <label for="exampleInputEmail1" class="form-label">images</label>
+                    <input type="file" name="file" class="form-control" id="exampleInputEmail1"
                         aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3 d-flex">

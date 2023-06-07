@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\StudentController;
 
 /*
@@ -14,10 +16,16 @@ use App\Http\Controllers\StudentController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/siswa', [StudentController::class, 'index']);
+Route::get('/siswa/create', [StudentController::class, 'create']);
+Route::post('/siswa/store', [StudentController::class, 'store']);
+Route::get('/siswa/{id}', [StudentController::class, 'show']);
+Route::get('/siswa/edit/{id}', [StudentController::class, 'edit']);
+Route::patch('/siswa/update/{id}', [StudentController::class, 'update']);
+Route::delete('/siswa/delete/{id}', [StudentController::class, 'destroy']);
 
-Route::get('/students', [StudentController::class, 'index']);
-Route::get('/students/create', [StudentController::class, 'create']);
-Route::post()
+Route::get('/images', [ImageController::class, 'index']);
+Route::get('/images/create', [ImageController::class, 'create']);
+Route::post('/images/store', [ImageController::class, 'store']);
+
+Route::get('/albums', [AlbumController::class, 'index']);

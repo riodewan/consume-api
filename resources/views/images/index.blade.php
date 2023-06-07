@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Get Data API Students</title>
+    <title>Get Data API Images</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
@@ -25,31 +25,29 @@
             <thead>
                 <tr>
                     <th class="text-center">No</th>
-                    <th>NIS</th>
-                    <th>Nama</th>
-                    <th>Rombel</th>
-                    <th>Rayon</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Action</th>
+                    <th>Title</th>
+                    <th>Gambar</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($students as $value)
+                @foreach($images as $value)
                 <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $value['nis'] }}</td>
-                    <td>{{ $value['nama'] }}</td>
-                    <td>{{ $value['rombel'] }}</td>
-                    <td>{{ $value['rayon'] }}</td>
-                    <td>{{ $value['tgl_lahir'] }}</td>
+                    <td>{{ $value['title'] }}</td>
+                    <td>@if($value['image'] != NULL)
+                        <img src="{{ $value['image_path']}}" alt="" width="75px">
+                        @else
+                        <p>Tidak Ada Gambar</p>
+                        @endif
+                    </td>
                     <td>
-                        <a href="/siswa/{{ $value['id'] }}" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
+                        {{-- <a href="/siswa/{{ $value['id'] }}" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
                         <a href="/siswa/edit/{{ $value['id'] }}" class="btn btn-warning"><i class="bi bi-clipboard2-pulse-fill"></i></a>
                         <form action="/siswa/delete/{{ $value['id'] }}" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
-                        </form>
+                        </form> --}}
 
                         {{-- <form action="/siswa/delete/{{$value['id']}}" method="POST">
                             @csrf
