@@ -18,7 +18,7 @@
             </ul>
         </div>
         @endif
-            <form action="/images/store" method="post" enctype="multipart/form-data">
+            <form action="/images/store" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">title</label>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">images</label>
-                    <input type="file" name="file" class="form-control" id="exampleInputEmail1"
+                    <input type="file" name="image" class="form-control" id="exampleInputEmail1"
                         aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3 d-flex">

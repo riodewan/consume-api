@@ -27,7 +27,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
+        return view('images.create');
     }
 
     /**
@@ -35,7 +35,22 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newName = null;
+            if($request->image){
+                $extension = $request->file('image')->getClientOriginalExtension();
+                $newName = $request->title.'-'.now()->timestamp.'.'.$extension;
+                $request->file('image')->move(public_path('/storage/'), $newName);
+            }
+
+        $payload = [
+            'title' => $request->title,
+            'image' => $newName,
+           ];
+
+            $baseApi = new BaseApi;
+            $response = $baseApi->create('/api/images/store', $payload);
+            return redirect('/images')->with('success', 'Success add new Students to API!');
+
     }
 
     /**
