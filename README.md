@@ -239,19 +239,3 @@ Pilih method DELETE untuk menghapus data. Lalu, masukkan URL spesifik data mana 
 
 http://localhost:8080/product/7
 Langsung saja klik Send, maka Anda akan mendapatkan pesan bahwa data telah berhasil dihapus dari database.
-
-test menghapus data
-Baca Juga: Cara Mengatasi Unable to Connect to Your Database Server di CodeIgniter
-
-Kesimpulan
-Bagaimana, Anda telah berhasil membuat web service dengan CodeIgniter 4, kan? Cukup mudah, ya? 
-
-Sayangnya, web service REST API yang Anda buat masih tersimpan di komputer pribadi. Nah, agar bisa diakses dan digunakan publik, Anda harus membuatnya online dengan cara menguploadnya di hosting.
-
-Layanan Unlimited Hosting Niagahoster bisa menjadi pilihan tepat, lho. Niagahoster menawarkan hosting murah berkualitas dengan fitur yang lengkap.
-
-Mulai dari kecepatan loading yang didukung oleh Litespeed, web server tercepat di dunia, hingga keamanan terjamin dari Imunify360 yang bisa melindungi server dari DDoS dan Malware.
-
-Selain itu, hosting Niagahoster juga memiliki jaminan uptime 99,9% yang membuat web service Anda bisa selalu online 24 jam.
-
-Menariknya, Anda bisa menikmati layanan tersebut hanya dengan harga Rp27rb/bulan. Sangat menarik, kan?
