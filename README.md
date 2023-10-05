@@ -24,21 +24,6 @@ Di langkah ini, silakan akses halaman localhost/phpMyAdmin di web browser Anda. 
 membuat database REST API CodeIgniter di phpMyAdmin
 Kalau sudah berhasil dibuat, klik database baru Anda, lalu pilih tab SQL dan salinlah SQL Query di bawah ini pada kolom yang tersedia:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
 CREATE TABLE produk (
     id int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
     nama_produk varchar(100) NOT NULL COMMENT 'Nama Produk',
@@ -78,18 +63,6 @@ Langkah selanjutnya untuk membuat REST API dengan CodeIgniter adalah membuat fil
 
 Kemudian, salinlah kode di bawah ini:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
 <?php
  
 namespace App\Models;
@@ -107,92 +80,6 @@ File model ini berfungsi untuk mengakses tabel pada database Anda. Ubah nilai da
 6. Membuat File REST Controller
 Pada tahap ini, Anda akan membuat file REST Controller yang berisi fungsi untuk menampilkan, menambah, mengubah dan menghapus data.Masuklah ke direktori app\Controllers dan buatlah file baru bernama Product.php. Kemudian, salin kode di bawah ini ke dalam file tersebut:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
 <?php
  
 namespace App\Controllers;
